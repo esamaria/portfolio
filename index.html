@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esa Maria Shyju | AI & Full-Stack Cyber-Engine</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Custom Neon Pointer & Spotlight Glow -->
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Matrix Binary Rain Canvas Background -->
+    <canvas id="matrixCanvas"></canvas>
+
+    <!-- Header & Cyber Navbar -->
+    <header class="site-header">
+        <div class="logo">
+            <span class="logo-bracket">&lt;</span>Esa<span class="logo-accent">Maria</span><span class="logo-bracket">/&gt;</span>
+        </div>
+        
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+            <span></span><span></span><span></span>
+        </button>
+
+        <nav class="site-nav" id="siteNav">
+            <ul>
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#terminal" class="nav-link">CLI Terminal</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#internships" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-controls">
+            <button id="soundToggle" class="cyber-btn-icon" title="Toggle UI Sound FX">🔊</button>
+            <button id="themeToggle" class="cyber-btn-icon" title="Toggle Theme">🌙</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="status-badge"><span class="pulse-dot"></span> System Online | Ready for Hire</div>
+                <h1>Architecting <br><span class="gradient-text">Next-Gen AI Systems</span></h1>
+                <p class="tagline">&gt; <span id="typewriter"></span><span class="cursor-blink">_</span></p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn primary-glow-btn">Initialize Work <span class="arrow">→</span></a>
+                    <a href="#terminal" class="btn secondary-glass-btn">Launch CLI</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="hologram-ring"></div>
+                <div class="avatar-frame 3d-tilt">
+                    <img src="images/esa.jpeg" alt="Esa Maria Shyju" id="profileImg" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop'">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section-container">
+            <h2 class="section-title" data-title="SYSTEM_INFO">About The Developer</h2>
+            <div class="about-grid">
+                <article class="glass-card 3d-tilt">
+                    <p class="lead-text">
+                        Final-year Computer Science student at Mar Baselios College of Engineering and Technology (CGPA: 9.32/10) specializing in Artificial Intelligence and Full-Stack Architectures.
+                    </p>
+                    <p>
+                        Engineered LLM fine-tuning pipelines, automated GitHub developer assistants, predictive health analytics, and full-stack MERN engines. Passionate about software craftsmanship, optimization, and real-world system design.
+                    </p>
+                </article>
+                <aside class="glass-card 3d-tilt">
+                    <h3 class="card-title">Telemetry</h3>
+                    <ul class="telemetry-list">
+                        <li><span>Location</span><strong>Thiruvananthapuram, IN</strong></li>
+                        <li><span>Degree</span><strong>B.Tech CSE (2023–2027)</strong></li>
+                        <li><span>Academic Score</span><strong class="highlight-cyan">CGPA 9.32</strong></li>
+                        <li><span>Specialization</span><strong>GenAI & MERN Stack</strong></li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Interactive CLI Terminal Simulator -->
+        <section id="terminal" class="section-container">
+            <h2 class="section-title" data-title="INTERACTIVE_SHELL">Developer Terminal</h2>
+            <div class="terminal-window glass-card">
+                <div class="terminal-header">
+                    <span class="term-dot red"></span>
+                    <span class="term-dot yellow"></span>
+                    <span class="term-dot green"></span>
+                    <span class="term-title">esa@mbcet-node-01:~</span>
+                </div>
+                <div class="terminal-body" id="terminalOutput">
+                    <p class="term-line">System initialized. Type <span class="term-highlight">'help'</span> to view available system commands.</p>
+                </div>
+                <div class="terminal-input-row">
+                    <span class="term-prompt">esa@portfolio:~$</span>
+                    <input type="text" id="terminalInput" placeholder="try 'skills', 'projects', 'clear'..." autocomplete="off">
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Matrix -->
+        <section id="skills" class="section-container">
+            <h2 class="section-title" data-title="TECH_STACK">Technical Arsenal</h2>
+            <div class="skills-wrapper">
+                <div class="glass-card 3d-tilt">
+                    <h3 class="card-title">Languages & Frameworks</h3>
+                    <div class="skill-pills-container">
+                        <span class="cyber-pill">Python</span>
+                        <span class="cyber-pill">Java</span>
+                        <span class="cyber-pill">C</span>
+                        <span class="cyber-pill">MongoDB</span>
+                        <span class="cyber-pill">Express.js</span>
+                        <span class="cyber-pill">React.js</span>
+                        <span class="cyber-pill">Node.js</span>
+                        <span class="cyber-pill">PyTorch</span>
+                        <span class="cyber-pill">Hugging Face</span>
+                        <span class="cyber-pill">Streamlit</span>
+                    </div>
+                </div>
+                <div class="glass-card 3d-tilt">
+                    <h3 class="card-title">Domain Expertise Metrics</h3>
+                    <div class="skill-meter">
+                        <div class="meter-label"><span>Full-Stack MERN Architecture</span><span>92%</span></div>
+                        <div class="meter-bar"><div class="meter-fill" style="width: 92%;"></div></div>
+                    </div>
+                    <div class="skill-meter">
+                        <div class="meter-label"><span>LLM Fine-Tuning & GenAI</span><span>88%</span></div>
+                        <div class="meter-bar"><div class="meter-fill" style="width: 88%;"></div></div>
+                    </div>
+                    <div class="skill-meter">
+                        <div class="meter-label"><span>Parallel Execution & FPGA</span><span>78%</span></div>
+                        <div class="meter-bar"><div class="meter-fill" style="width: 78%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabular Education & Experience -->
+        <section id="education" class="section-container">
+            <h2 class="section-title" data-title="ACADEMICS">Education History</h2>
+            <div class="glass-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Institution</th>
+                            <th>Degree / Course</th>
+                            <th>Duration</th>
+                            <th>Performance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mar Baselios College of Engineering and Technology</td>
+                            <td>B.Tech in Computer Science & Engineering</td>
+                            <td>2023 – 2027</td>
+                            <td><span class="badge-cyan">CGPA 9.32 / 10</span></td>
+                        </tr>
+                        <tr>
+                            <td>St. Mary's HSS, Pattom, Thiruvananthapuram</td>
+                            <td>12th KBHSE</td>
+                            <td>2021 – 2023</td>
+                            <td><span class="badge-pink">96%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Infant Jesus Central School, Thiruvananthapuram</td>
+                            <td>10th CBSE</td>
+                            <td>2020 – 2021</td>
+                            <td><span class="badge-pink">94%</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="internships" class="section-container">
+            <h2 class="section-title" data-title="EXPERIENCE">Internship History</h2>
+            <div class="glass-table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Organization</th>
+                            <th>Role</th>
+                            <th>Duration</th>
+                            <th>Impact Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ICT Academy of Kerala</td>
+                            <td>Full Stack Development Intern</td>
+                            <td>Dec 2024 – Jan 2025</td>
+                            <td>Engineered MERN stack interfaces, implemented JWT authentication, optimized MongoDB queries.</td>
+                        </tr>
+                        <tr>
+                            <td>Intel Unnati Program</td>
+                            <td>AI & Solution Design Intern</td>
+                            <td>May 2024 – Jul 2024</td>
+                            <td>Fine-tuned LLMs on Hugging Face, optimized CPU inference efficiency, and built custom AI chatbots.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Projects Showcase -->
+        <section id="projects" class="section-container">
+            <h2 class="section-title" data-title="PORTFOLIO">Featured Systems</h2>
+            
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Modules</button>
+                <button class="filter-btn" data-filter="ai">AI / GenAI</button>
+                <button class="filter-btn" data-filter="web">Web Full-Stack</button>
+            </div>
+
+            <div id="projectsGrid" class="projects-grid"></div>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact" class="section-container">
+            <h2 class="section-title" data-title="TRANSMIT">Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="glass-card 3d-tilt">
+                    <h3 class="card-title">Communication Channels</h3>
+                    <p>Open for software engineering roles, AI research projects, and tech internships.</p>
+                    <ul class="contact-links">
+                        <li><span class="icon">📧</span><a href="mailto:esamariashyju@gmail.com">esamariashyju@gmail.com</a></li>
+                        <li><span class="icon">📞</span><a href="tel:+917306177237">+91-7306177237</a></li>
+                        <li><span class="icon">🔗</span><a href="https://www.linkedin.com/in/esa-maria-shyju" target="_blank" rel="noopener">linkedin.com/in/esa-maria-shyju</a></li>
+                        <li><span class="icon">💻</span><a href="https://github.com/esamaria" target="_blank" rel="noopener">github.com/esamaria</a></li>
+                    </ul>
+                    <a href="resume (1).pdf" download="Esa_Maria_Shyju_Resume.pdf" class="btn primary-glow-btn full-width">📥 Download Official CV (PDF)</a>
+                </div>
+
+                <form id="contactForm" class="glass-card contact-form" novalidate>
+                    <h3 class="card-title">Send Direct Signal</h3>
+                    
+                    <div class="form-group">
+                        <label for="name">Identifier (Name)</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe">
+                        <small class="error-msg" id="nameError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Return Signal Address (Email)</label>
+                        <input type="email" id="email" name="email" placeholder="john@example.com">
+                        <small class="error-msg" id="emailError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Transmission Payload (Message)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Your message details..."></textarea>
+                        <small class="error-msg" id="messageError"></small>
+                    </div>
+
+                    <button type="submit" class="btn primary-glow-btn full-width">Transmit Packet →</button>
+                    <div id="formSuccess" class="success-msg"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Esa Maria Shyju. Designed for Web Technology Portfolio Assignment (23CSB40B).</p>
+    </footer>
+
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to Top">↑</button>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
